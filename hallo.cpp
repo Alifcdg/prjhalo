@@ -22,6 +22,11 @@ int main() {
   cout << "Nama 5; ";
   (cin, nama5);
 
-  
+  cout << "\nSelamat Datang Di Resort Jungjae Sekeluarga:\n";
+  cout << "1. " << nama1 << endl;
+  cout << "2. " << nama2 << endl;
+  cout << "3. " << nama3 << endl;
+  cout << "4. " << nama4 << endl;
+  cout << "5. " << nama5 << endl;
   return 0;
 }
