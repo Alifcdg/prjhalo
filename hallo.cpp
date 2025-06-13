@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 //int main() {
@@ -9,25 +10,26 @@ using namespace std;
 
 //INI ADALAH CODING ARRAY STRING VERSI MANUAL
 int main() {
-  string nama1, nama2, nama3, nama4, nama5;
-  cout << "Masukkan 5 nama sesuai keperluan anda: \n";
-  
-  cout << "Nama 1: ";
-  getline(cin, nama1);
-  cout << "Nama 2: ";
-  getline(cin, nama2);
-  cout << "Nama 3: ";
-  getline(cin, nama3);
-  cout << "Nama 4: ";
-  getline(cin, nama4);
-  cout << "Nama 5: ";
-  getline(cin, nama5);
+  vector<string> tamu;
+  string nama;
+  char lagi = 'y';
 
-  cout << "\nSelamat Datang Di Resort Jungjae Sekeluarga:\n";
-  cout << "1. " << nama1 << endl;
-  cout << "2. " << nama2 << endl;
-  cout << "3. " << nama3 << endl;
-  cout << "4. " << nama4 << endl;
-  cout << "5. " << nama5 << endl;
+  cout << "Masukkan Nama daftar tamu:\n";
+
+  while (lagi =='y' || lagi == 'Y'){
+    cout << "Nama tamu: ";
+    getline(cin,nama);
+    tamu.push_back(nama);
+
+    cout << "Apakah ada tamu yang lain? (y/n): ";
+    cin >> lagi;
+    cin.ignore();
+  }
+
+  cout << "Selamat Datang para tamu spesial Resort Jungjae:\n";
+  for(size_t i = 0; i < tamu.size(); i++) {
+    cout << i + 1 << ". " << tamu[i] << endl;
+  }
+  
   return 0;
 }
