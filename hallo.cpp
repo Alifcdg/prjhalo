@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 //int main() {
@@ -12,15 +13,15 @@ int main() {
   cout << "Masukkan 5 nama sesuai keperluan anda: \n";
   
   cout << "Nama 1: ";
-  (cin, nama1);
+  getline(cin, nama1);
   cout << "Nama 2: ";
-  (cin, nama2);
+  getline(cin, nama2);
   cout << "Nama 3: ";
-  (cin, nama3);
-  cout << "Nama 4; ";
-  (cin, nama4);
-  cout << "Nama 5; ";
-  (cin, nama5);
+  getline(cin, nama3);
+  cout << "Nama 4: ";
+  getline(cin, nama4);
+  cout << "Nama 5: ";
+  getline(cin, nama5);
 
   cout << "\nSelamat Datang Di Resort Jungjae Sekeluarga:\n";
   cout << "1. " << nama1 << endl;
